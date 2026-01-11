@@ -9,6 +9,7 @@ import RegisterAsCoach from "./pages/RegisterAsCoach";
 import Partner from "./pages/Partner";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollRestoration from "./components/ScrollRestoration";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollRestoration />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

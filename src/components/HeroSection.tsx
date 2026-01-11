@@ -94,11 +94,13 @@ export default function HeroSection() {
           return (
             <div
               key={i}
-              className="absolute transition-transform duration-[3000ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+              className="absolute transition-transform"
               style={{
                 transform: `translateX(${offset * 120}%)`,
                 opacity: offset === 0 ? 1 : 0,
                 zIndex: offset === 0 ? 10 : 1,
+                transitionDuration: "3000ms",
+                transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
               }}
             >
               <div className="relative w-[92vw] max-w-[1350px] h-[560px] rounded-[28px] overflow-hidden">

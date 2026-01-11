@@ -10,7 +10,7 @@ const ContactHero = () => {
       <div className="absolute inset-0 bg-black/45" />
 
       <div className="relative z-10 text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-white animate-fade-in">
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-white">
           Contact Us
         </h1>
       </div>

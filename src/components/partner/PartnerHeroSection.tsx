@@ -16,7 +16,7 @@ const PartnerHeroSection = () => {
       </div>
 
       <div className="absolute inset-x-0 bottom-6 flex justify-center px-4">
-        <div className="flex items-center gap-2 text-sm md:text-base text-white/90">
+        <div className="flex items-center gap-2 text-sm md:text-base text-white/80">
           <span>Home</span>
           <span>/</span>
           <span className="font-medium text-white">Partner With Us</span>
