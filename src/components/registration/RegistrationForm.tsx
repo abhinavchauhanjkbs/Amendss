@@ -58,72 +58,73 @@ export function RegistrationForm() {
           <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Row 1 */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Full Name</label>
-              <input placeholder="Enter your full name" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm focus:ring-0" />
+              <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Full Name</label>
+              <input id="fullName" name="fullName" autoComplete="name" placeholder="Enter your full name" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm focus:ring-0" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Gender</label>
-              <select className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm">
-                <option>Select gender</option>
-                <option>Male</option>
-                <option>Female</option>
+              <label htmlFor="gender" className="block text-sm font-medium text-gray-700">Gender</label>
+              <select id="gender" name="gender" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </select>
             </div>
 
             {/* Row 2 */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Date of Birth</label>
-              <input type="date" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="dob" className="block text-sm font-medium text-gray-700">Date of Birth</label>
+              <input id="dob" name="dob" type="date" autoComplete="bday" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Contact Number</label>
-              <input placeholder="+91" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-700">Contact Number</label>
+              <input id="contactNumber" name="contactNumber" placeholder="+91" autoComplete="tel" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
 
             {/* Row 3 (file + email) */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Upload Government ID</label>
+              <label htmlFor="govtId" className="block text-sm font-medium text-gray-700">Upload Government ID</label>
               <div className="mt-2 relative">
-                <input type="text" placeholder="No file chosen" className="w-full border border-gray-200 rounded-md px-3 py-3 text-sm pr-12" readOnly />
-                <label className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center gap-2 px-3 py-1.5 border rounded-md bg-white cursor-pointer text-gray-600">
+                <input id="govtId" name="govtId" type="file" accept="image/*,.pdf" className="hidden" />
+                <input type="text" placeholder="No file chosen" className="w-full border border-gray-200 rounded-md px-3 py-3 text-sm pr-12" readOnly aria-hidden />
+                <label htmlFor="govtId" className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center gap-2 px-3 py-1.5 border rounded-md bg-white cursor-pointer text-gray-600">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14"/></svg>
                 </label>
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email Address</label>
-              <input placeholder="your.email@example.com" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+              <input id="email" name="email" type="email" autoComplete="email" placeholder="your.email@example.com" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
 
             {/* Row 4 */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Residential Address</label>
-              <input placeholder="Enter address" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="address" className="block text-sm font-medium text-gray-700">Residential Address</label>
+              <input id="address" name="address" placeholder="Enter address" autoComplete="street-address" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Upload Recent Photograph</label>
+              <label htmlFor="photo" className="block text-sm font-medium text-gray-700">Upload Recent Photograph</label>
               <div className="mt-2">
-                <input type="file" accept="image/*" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm" />
+                <input id="photo" name="photo" type="file" accept="image/*" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm" />
               </div>
             </div>
 
             {/* Row 5 */}
             <div>
-              <label className="block text-sm font-medium text-gray-700">Emergency Contact Name</label>
-              <input placeholder="Name" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="emergencyName" className="block text-sm font-medium text-gray-700">Emergency Contact Name</label>
+              <input id="emergencyName" name="emergencyName" placeholder="Name" autoComplete="name" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Emergency Contact Number</label>
-              <input placeholder="Number" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
+              <label htmlFor="emergencyNumber" className="block text-sm font-medium text-gray-700">Emergency Contact Number</label>
+              <input id="emergencyNumber" name="emergencyNumber" placeholder="Number" autoComplete="tel" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm" />
             </div>
 
             {/* Row 6 */}
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700">Preferred Communication</label>
-              <select className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm">
-                <option>Email</option>
-                <option>Phone</option>
-                <option>WhatsApp</option>
+              <label htmlFor="preferredCommunication" className="block text-sm font-medium text-gray-700">Preferred Communication</label>
+              <select id="preferredCommunication" name="preferredCommunication" className="mt-2 w-full border border-gray-200 rounded-md px-3 py-3 text-sm">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="whatsapp">WhatsApp</option>
               </select>
             </div>
 

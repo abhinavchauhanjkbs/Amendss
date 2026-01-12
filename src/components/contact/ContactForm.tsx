@@ -39,50 +39,64 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-3xl p-6 md:p-10 shadow-[0_25px_60px_rgba(15,23,42,0.08)]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
+              <label htmlFor="firstName" className="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
               <Input
+                id="firstName"
+                name="firstName"
                 type="text"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 required
+                autoComplete="given-name"
                 className="h-12 rounded-xl"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
+              <label htmlFor="lastName" className="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
               <Input
+                id="lastName"
+                name="lastName"
                 type="text"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 required
+                autoComplete="family-name"
                 className="h-12 rounded-xl"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Phone Number</label>
+              <label htmlFor="phone" className="block text-sm font-semibold text-gray-900 mb-2">Phone Number</label>
               <Input
+                id="phone"
+                name="phone"
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
+                autoComplete="tel"
                 className="h-12 rounded-xl"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
               <Input
+                id="email"
+                name="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
+                autoComplete="email"
                 className="h-12 rounded-xl"
               />
             </div>
           </div>
 
           <div className="mt-6">
-            <label className="block text-sm font-semibold text-gray-900 mb-2">Message</label>
+            <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">Message</label>
             <Textarea
+              id="message"
+              name="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
