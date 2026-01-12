@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import ctaRegister from "@/assets/cta-register.png";
 import footerLogo from "@/assets/footer-logo.svg";
 
 const quickLinks = [
@@ -28,10 +29,18 @@ const legal = [
 
 const RegisterFooter = () => {
   return (
-    <footer id="contact" className="bg-[#0a0a0a] text-white pt-48 md:pt-56 -mt-32 md:-mt-40">
-      <div className="container-custom px-4 md:px-8 lg:px-16">
+    <footer
+      id="contact"
+      className="relative bg-[#0a0a0a] text-white pt-28 md:pt-48 -mt-12 md:-mt-40 overflow-visible md:overflow-hidden"
+    >
+      <div className="md:hidden absolute left-4 right-4 top-0 -translate-y-1/2">
+        <div className="max-w-md mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-white/10">
+          <img src={ctaRegister} alt="Ready to Start Coaching With Us?" className="w-full h-auto object-cover" />
+        </div>
+      </div>
+      <div className="container-custom mt-6 md:mt-20 px-4 md:px-8 lg:px-16">
         <div id="partner" className="scroll-mt-32"></div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mt-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-10 mt-4 mb-12">
           <div>
             <h4 className="font-semibold mb-6 text-lg text-white">Quick Links</h4>
             <ul className="space-y-4">

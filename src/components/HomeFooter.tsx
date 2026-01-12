@@ -30,15 +30,15 @@ const HomeFooter = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-[#0a0a0a] text-white pt-40 relative mt-40">
+    <footer id="contact" className="bg-[#0a0a0a] text-white pt-20 md:pt-40 relative mt-24 md:mt-40">
       {/* Home Page CTA Banner */}
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 -top-40 md:-top-44 lg:-top-48">
+      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 top-0 -translate-y-1/2 lg:translate-y-0 lg:-top-48">
         <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-white/10">
           <img src={ctaHome} alt="Home page CTA" className="w-full h-full object-cover" />
         </div>
       </div>
 
-      <div className="container-custom mt-40 px-4 md:px-8 lg:px-16">
+      <div className="container-custom mt-12 md:mt-40 px-4 md:px-8 lg:px-16">
         <div id="partner" className="scroll-mt-32"></div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
           {/* Quick Links */}

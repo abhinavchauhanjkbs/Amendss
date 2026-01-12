@@ -80,7 +80,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <section className="pt-16 pb-0 px-4 sm:px-6 bg-muted">
+    <section className="pt-16 pb-24 md:pb-0 px-4 sm:px-6 bg-muted">
       <div className="max-w-4xl mx-auto w-full">
         <FormHeader />
 

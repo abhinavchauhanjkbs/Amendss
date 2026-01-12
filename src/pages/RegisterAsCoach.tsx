@@ -11,8 +11,8 @@ const RegisterAsCoach = () => {
       <main>
         <RegisterHeroSection />
         <RegistrationForm />
-        <div className="bg-[#f5f5f5] pt-10 md:pt-20 pb-0">
-          <div className="max-w-6xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border border-white/20 -mb-24 md:-mb-28">
+        <div className="hidden md:block bg-[#f5f5f5] pt-10 md:pt-20 pb-0">
+          <div className="relative z-20 max-w-6xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border border-white/20 -mb-16 lg:-mb-20">
             <img src={ctaRegister} alt="Ready to Start Coaching With Us?" className="w-full h-auto object-cover" />
           </div>
         </div>

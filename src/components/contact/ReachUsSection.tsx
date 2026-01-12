@@ -20,7 +20,7 @@ const contactMethods = [
 
 const ReachUsSection = () => {
   return (
-    <section className="bg-white pt-20 pb-48 md:pb-56">
+    <section className="bg-white pt-20 pb-24 md:pb-56">
       <div className="container-custom px-4">
         <div className="text-center max-w-xl mx-auto">
           <h2 className="mt-3 text-3xl md:text-4xl font-heading font-bold text-gray-900">Reach Us Directly</h2>

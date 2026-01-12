@@ -37,9 +37,9 @@ const Footer = ({ ctaImage, ctaAlt }: FooterProps) => {
   ];
 
   return (
-    <footer id="contact" className="bg-[#0a0a0a] text-white pt-36 relative mt-24">
+    <footer id="contact" className="bg-[#0a0a0a] text-white pt-16 md:pt-36 relative mt-20 md:mt-24">
       {/* CTA Banner - positioned on top */}
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 -top-36 md:-top-40 lg:-top-44">
+      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 top-0 -translate-y-1/2 lg:translate-y-0 lg:-top-44">
         <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-white/10">
           <img
             src={bannerImage}
@@ -49,9 +49,9 @@ const Footer = ({ ctaImage, ctaAlt }: FooterProps) => {
         </div>
       </div>
 
-      <div className="container-custom mt-40 px-4 md:px-8 lg:px-16">
+      <div className="container-custom mt-8 md:mt-40 px-4 md:px-8 lg:px-16">
         <div id="partner" className="scroll-mt-32"></div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 mb-16 md:mt-12">
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-6 text-lg text-white">Quick Links</h4>

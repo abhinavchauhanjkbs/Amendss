@@ -9,7 +9,7 @@ const highlights = [
 
 const PartnerLoveSection = () => {
   return (
-    <section className="bg-white pt-20 pb-40">
+    <section className="bg-white pt-16 pb-16 md:pt-20 md:pb-40">
       <div className="container-custom px-4">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center">
           <div className="order-2 lg:order-2">

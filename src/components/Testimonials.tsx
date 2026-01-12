@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="section-padding bg-background overflow-hidden pb-32 md:pb-40">
+    <section className="section-padding bg-background overflow-hidden pb-12 md:pb-40">
       <div className="container-custom mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
           What Our Users Say

@@ -28,15 +28,15 @@ const legal = [
 
 const AboutFooter = () => {
   return (
-    <footer id="contact" className="bg-[#0a0a0a] text-white pt-64 relative">
-      {/* CTA Banner with Image */}
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 -top-40">
+    <footer id="contact" className="bg-[#0a0a0a] text-white pt-24 md:pt-40 relative">
+      {/* CTA Banner with Image - align same as Home footer on mobile: sit midpoint at top (top-0) */}
+      <div className="absolute left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 top-0 -translate-y-1/2 z-20">
         <div className="rounded-2xl overflow-hidden shadow-xl">
           <img src={ctaBanner} alt="Join Our Community" className="w-full h-auto" />
         </div>
       </div>
 
-      <div className="container-custom px-4 md:px-8 lg:px-16 pt-24">
+      <div className="container-custom px-4 md:px-8 lg:px-16 pt-6 md:pt-40">
         <div id="partner" className="scroll-mt-32"></div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
           {/* Quick Links */}

@@ -4,12 +4,18 @@ import iconIntegration from "@/assets/partner-icon-seamless-integration.png";
 import iconRevenue from "@/assets/partner-icon-revenue-growth.png";
 import iconTrust from "@/assets/partner-icon-trusted-collaboration.png";
 
-const featureImages = [
+type FeatureImage = {
+  src: string;
+  alt: string;
+  className?: string;
+};
+
+const featureImages: FeatureImage[] = [
   { src: iconReach, alt: "Larger Reach" },
   {
     src: iconIntegration,
     alt: "Seamless Integration",
-    className: "max-w-[360px] md:max-w-[400px] scale-[1.08]",
+    className: "scale-[1.12] md:scale-[1.16]",
   },
   { src: iconRevenue, alt: "Revenue Growth" },
   { src: iconTrust, alt: "Trusted Collaboration" },
@@ -17,26 +23,16 @@ const featureImages = [
 
 const PartnerWhySection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0a] py-24 text-white">
-      {/* Background grid dots */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-10"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.4) 1px, transparent 0)",
-          backgroundSize: "42px 42px",
-        }}
-      />
-
-      <div className="container-custom relative z-10 px-4">
+    <section className="relative bg-[#0a0a0a] py-16 md:py-24 text-white">
+      <div className="container-custom px-4">
         {/* Header */}
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="mt-4 text-3xl font-heading font-bold md:text-5xl">
+            <h2 className="mt-2 md:mt-4 text-3xl font-heading font-bold md:text-5xl">
               Why Partner With Amendss
             </h2>
 
-            <p className="mt-6 text-lg text-white/80">
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-white/80">
               Collaborate with us to reach new audiences, scale your impact, and support couples
               through innovative digital tools backed by expert guidance.
             </p>
@@ -53,16 +49,26 @@ const PartnerWhySection = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="mt-14 grid gap-3 md:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+        <div className="mt-4 md:mt-8 grid gap-1.5 md:grid-cols-2 lg:grid-cols-4 md:gap-3 lg:gap-4">
           {featureImages.map((image) => (
             <div key={image.alt} className="flex justify-center">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className={`w-full max-w-[280px] rounded-2xl object-contain ${
-                  image.className ?? ""
-                }`}
-              />
+              <div
+                className="
+                  w-full
+                  max-w-[220px] md:max-w-[280px] lg:max-w-[360px]
+                  h-[260px] md:h-auto
+                  overflow-hidden
+                  rounded-2xl
+                  flex items-center justify-center
+                  p-2 md:p-3
+                "
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className={`max-w-full max-h-full object-contain ${image.className ?? ""}`}
+                />
+              </div>
             </div>
           ))}
         </div>

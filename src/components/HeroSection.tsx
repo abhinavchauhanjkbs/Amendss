@@ -86,7 +86,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative mt-12 overflow-hidden">
-      <div className="relative w-full h-[640px] flex items-center justify-center">
+      <div className="relative w-full h-[420px] md:h-[520px] lg:h-[640px] flex items-center justify-center">
 
         {slides.map((slide, i) => {
           const offset = i - current;
@@ -103,36 +103,36 @@ export default function HeroSection() {
                 transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
               }}
             >
-              <div className="relative w-[92vw] max-w-[1350px] h-[560px] rounded-[28px] overflow-hidden">
+              <div className="relative w-[92vw] max-w-[1350px] h-[360px] md:h-[480px] lg:h-[560px] rounded-[28px] overflow-hidden">
 
                 <img src={slide.image} className="w-full h-full object-cover" alt="" />
 
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
                 {offset === 0 && (
-                  <div className="absolute left-16 top-1/2 -translate-y-1/2 max-w-[620px] text-white">
+                  <div className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 w-[86vw] md:w-auto max-w-[520px] lg:max-w-[620px] text-white px-2 md:px-0">
 
-                    <h1 className="font-serif text-[56px] leading-[1.05] font-semibold tracking-tight space-y-1">
+                    <h1 className="font-serif text-lg sm:text-xl md:text-4xl lg:text-[56px] lg:leading-[1.05] font-semibold tracking-tight space-y-1">
                       {slide.headingLines.map((line) => (
-                        <span key={line.text} className={`block whitespace-nowrap ${line.className ?? ""}`}>
+                        <span key={line.text} className={`block whitespace-nowrap sm:whitespace-normal lg:whitespace-nowrap ${line.className ?? ""}`}>
                           {line.text}
                         </span>
                       ))}
                     </h1>
 
-                    <p className="mt-6 text-white/80 text-[18px] leading-relaxed max-w-[680px] space-y-1">
-                      <span className="block whitespace-nowrap">{slide.descriptionLines[0]}</span>
-                      <span className="block whitespace-nowrap">{slide.descriptionLines[1]}</span>
+                    <p className="mt-4 md:mt-6 text-white/80 text-sm md:text-[18px] leading-relaxed max-w-full lg:max-w-[680px] space-y-1">
+                      <span className="block whitespace-normal lg:whitespace-nowrap">{slide.descriptionLines[0]}</span>
+                      <span className="block whitespace-normal lg:whitespace-nowrap">{slide.descriptionLines[1]}</span>
                     </p>
 
-                    <div className="mt-8 flex gap-4">
-                      <Button className="h-[52px] px-8 rounded-full bg-[#a72725] text-white hover:bg-[#a72725] shadow-[0_0_16px_rgba(167,39,37,0.55)]">
+                    <div className="mt-6 md:mt-8 flex flex-col lg:flex-row items-center lg:items-start gap-3 md:gap-4 w-full">
+                      <Button className="w-full lg:w-auto h-10 md:h-[52px] px-4 md:px-8 rounded-full bg-[#a72725] text-white hover:bg-[#a72725] shadow-[0_0_16px_rgba(167,39,37,0.55)]">
                         {slide.primary}
                       </Button>
 
                       <Button
                         variant="outline"
-                        className="h-[52px] px-8 rounded-full border border-white text-white bg-transparent hover:bg-transparent hover:text-white"
+                        className="w-full lg:w-auto h-10 md:h-[52px] px-4 md:px-8 rounded-full border border-white text-white bg-transparent hover:bg-transparent hover:text-white"
                       >
                         {slide.secondary}
                       </Button>
@@ -145,20 +145,22 @@ export default function HeroSection() {
           );
         })}
 
-        {/* FIGMA STYLE CAROUSEL INDICATORS */}
-        <div className="absolute -bottom-3 flex items-center justify-center w-full z-30">
-          <div className="flex gap-3">
-            {slides.map((_, i) => (
-              <div
-                key={i}
-                className={`transition-all duration-500 ease-out rounded-full 
-                  ${i === current ? "w-2.5 h-2.5 bg-[#a72725]" : "w-2.5 h-2.5 bg-[#a72725]/30"}
-                `}
-              />
-            ))}
-          </div>
-        </div>
+        {/* FIGMA STYLE CAROUSEL INDICATORS (moved out of overflow-hidden) */}
 
+      </div>
+
+      {/* Indicators rendered below the hero so they're not clipped by overflow */}
+      <div className="flex items-center justify-center w-full -mt-4 md:-mt-2 pb-6 md:pb-8 z-30">
+        <div className="flex gap-3">
+          {slides.map((_, i) => (
+            <div
+              key={i}
+              className={`transition-all duration-500 ease-out rounded-full ${
+                i === current ? "w-2.5 h-2.5 bg-[#a72725]" : "w-2.5 h-2.5 bg-[#a72725]/30"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
